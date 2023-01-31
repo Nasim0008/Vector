@@ -1,19 +1,20 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main()
 {
-    vector<int>v;
-    for(int i=0;i<8;i++)
+    int n;
+    cin>>n;
+    int arr[n+3];
+    for(int i=0;i<n;i++)
     {
-        int a;
-        cin>>a;
-        v.push_back(a);
+        cin>>arr[i];
+    }
+    set<int>s(arr,arr+n);// for the array
+    //set<int>s(v.begin(),s.end());
 
-    }
-    sort(v.begin(), v.end());
-    v.erase(unique(v.begin(), v.end()), v.end());
-    for(auto u:v)
+    for(auto u:s)
     {
-        cout<<u<<  " ";
+        cout<<u<<" ";
     }
+    cout<<endl;
 }
